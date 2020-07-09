@@ -1,33 +1,9 @@
 {
-  "name": "sails-hook-email-promise",
-  "version": "0.0.1",
+  "name": "sails-hook-email-datnt",
+  "version": "0.1.2",
   "description": "Email hook for Sails revised with promise and mailgun",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": {
-    "name": "Balderdas"
-  },
-  "maintainers": [
-    {
-      "name": "Scott Deutsch"
-    }
-  ],
-  "contributors": [
-    {
-      "name": "Cody Stoltman"
-    },
-    {
-      "name": "Mike McNeil"
-    },
-    {
-      "name": "Scott Gress"
-    },
-    {
-      "name": "Dan Prietti"
-    }
-  ],
+  "author": "datnt",
   "license": "MIT",
   "sails": {
     "isHook": true,
@@ -45,6 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/surgery18/sails-hook-email.git"
-  }
+    "url": "git://github.com/auTeam-Developer/sails-hook-email.git"
+  },
+  "bugs": {
+    "url": "https://github.com/auTeam-Developer/sails-hook-email/issues"
+  },
+  "homepage": "https://github.com/auTeam-Developer/sails-hook-email#readme",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
 }

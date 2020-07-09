@@ -112,9 +112,9 @@ module.exports = function Email(sails) {
         try {
           if (sails.config[self.configKey].transporter) {
             // If custom transporter is set, use that first
-            if (sails.config[self.configKey].transporter.toLowerCase() === 'mailgun') {
+            if (typeof sails.config[self.configKey].transporter === 'string' && sails.config[self.configKey].transporter.toLowerCase() === 'mailgun') {
               var mg = require('nodemailer-mailgun-transport');
-              transport = nodemailer.createTransport(mg({auth: sails.config[self.configKey].auth}));
+              transport = nodemailer.createTransport(mg({ auth: sails.config[self.configKey].auth }));
             } else {
               transport = nodemailer.createTransport(sails.config[self.configKey].transporter);
             }
@@ -147,7 +147,7 @@ module.exports = function Email(sails) {
      */
 
     send: function (template, data, options, cb) {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         data = data || {};
         // Turn off layouts by default
         if (typeof data.layout === 'undefined') data.layout = false;
@@ -204,7 +204,7 @@ module.exports = function Email(sails) {
           }]
 
         },
-          function(error, result) {
+          function (error, result) {
             if (error) {
               if (cb) cb(error);
               reject(error);
